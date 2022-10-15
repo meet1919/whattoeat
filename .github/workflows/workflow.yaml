@@ -19,6 +19,6 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
           aws-region: ap-south-1
-      - name: Push lambdas to s3
+      - name: Push designs to s3
         run: |
-          ./devops/push_lambda_to_s3.sh
+          aws s3 cp $PWD s3://what2eatapp --recursive
