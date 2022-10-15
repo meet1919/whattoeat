@@ -1,0 +1,24 @@
+name: Frontend Deployment
+
+on: [push]
+
+jobs:
+  push:
+    name: Automatically Push code to S3
+    runs-on: ubuntu-latest
+    env:
+      CI_COMMIT_SHA: ${{ github.sha }}
+      AWS_S3_BUCKET: 'what2eatapp'
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1.0.1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+          aws-region: ap-south-1
+      - name: Push lambdas to s3
+        run: |
+          ./devops/push_lambda_to_s3.sh
