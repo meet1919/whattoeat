@@ -22,4 +22,4 @@ jobs:
       - name: Push designs to s3
         run: |
           aws s3 rm s3://what2eatapp --recursive
-          aws s3 cp $PWD/whattoeat s3://what2eatapp --recursive --acl bucket-owner-full-control --metadata-directive REPLACE
+          aws s3 cp $PWD/whattoeat s3://what2eatapp --recursive --acl public-read --metadata-directive REPLACE
