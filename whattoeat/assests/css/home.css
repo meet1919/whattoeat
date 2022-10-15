@@ -208,12 +208,26 @@ body {
     text-align: center;
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 0px !important;
+    height: 1.2em !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .suggested-cards .dishes-des .dish-brief {
     color: black;
     text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .suggested-cards .dishes-des .dish-title {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 992px) {
+    .suggested-cards .dishes-des .dish-title {
+        font-size: 1.2em;
+    }
 }
 
 #dish-heading {

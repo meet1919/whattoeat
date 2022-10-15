@@ -44,7 +44,7 @@ $(document).ready(function () {
                         },
                         {
                             "ID": "4",
-                            "Name": "Suki Bhaji, Thepla & Shrikhand",
+                            "Name": "Suki Bhaji, Thepla",
                             "Description": "This dish amplifies your high 10x",
                             "image": "https://img-global.cpcdn.com/recipes/6641aef8c9cfeb49/680x482cq70/%E0%AA%AE%E0%AB%87%E0%AA%A5%E0%AB%80-%E0%AA%A8%E0%AA%BE-%E0%AA%A5%E0%AB%87%E0%AA%AA%E0%AA%B2%E0%AA%BE-%E0%AA%AC%E0%AA%9F%E0%AA%BE%E0%AA%95%E0%AA%BE-%E0%AA%B8%E0%AB%82%E0%AA%95%E0%AB%80-%E0%AA%AD%E0%AA%BE%E0%AA%9C%E0%AB%80-%E0%AA%97%E0%AB%81%E0%AA%9C%E0%AA%B0%E0%AA%BE%E0%AA%A4%E0%AB%80-%E0%AA%B8%E0%AB%8D%E0%AA%9F%E0%AA%BE%E0%AA%87%E0%AA%B2-methi-thepla-batata-suki-bhaji-recipe-in-gujarati-%E0%AA%B0%E0%AB%87%E0%AA%B8%E0%AB%80%E0%AA%AA%E0%AB%80-%E0%AA%AE%E0%AB%81%E0%AA%96%E0%AB%8D%E0%AA%AF-%E0%AA%AB%E0%AB%8B%E0%AA%9F%E0%AB%8B.jpg"
                         }
@@ -61,7 +61,7 @@ $(document).ready(function () {
                         },
                         {
                             "ID": "6",
-                            "Name": "Cheese Schezwan Frankie",
+                            "Name": "Cheese Schezwan",
                             "Description": "No words for this tongue boggling Dish",
                             "image": "https://th.bing.com/th/id/OIP.KnZMmy75i-_lWJZM7sCzPQHaFj?pid=ImgDet&rs=1"
                         }
@@ -80,7 +80,7 @@ $(document).ready(function () {
 
             let meal = response.meals[i]
             let meal_suggestion_element =
-                `<div class="col-sm-4 mt-3 mb-4">
+                `<div class="col-sm-12 col-md-6 col-lg-4 col-xxl-4 mt-3 mb-4">
                     <div class="per-meal">
                         <button class="meals-category">` + meal.meal_name + `</button>
                         <div class="row gy-2 mt-2 justify-content-center">
@@ -103,7 +103,7 @@ $(document).ready(function () {
                                         <img src="` + meal.dishes[1].image + `" alt="">
                                     </div>
                                     <div class="dishes-des">
-                                        <div class="row mt-3">
+                                        <div class="row pt-3">
                                         <p class="dish-title">` + meal.dishes[1].Name + `</p>
                                         <p class="dish-brief">` + meal.dishes[1].Description + `</p>
                                         </div>
