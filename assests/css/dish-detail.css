@@ -1,0 +1,42 @@
+#dish-ingredients .table {
+    color: black;
+}
+
+@media (max-width: 576px) {
+    #dish-ingredients {
+        margin-top: 1em;
+    }
+
+    #dish-main-img img {
+        width: 100% !important;
+    }
+}
+
+#dish-ingredients #recipe-note {
+    font-style: italic;
+    font-size: 0.8em;
+    color: black;
+}
+
+#dish-main-img h1 {
+    /* position: absolute;
+    left: 20%; */
+    text-align: center;
+    color: black;
+}
+
+#dish-main-img img {
+    width: 90%;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+.recipe-videos {
+    width: 100%;
+    height: 40em;
+    border-radius: 5px;
+}
