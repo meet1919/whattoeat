@@ -7,6 +7,7 @@ $(document).ready(function () {
         // FOR API
         $.get('https://amfqd61hk0.execute-api.ap-south-1.amazonaws.com/dev/v1/suggestion', function (response) {
             
+            console.log(response)
             // Set Day & Date in the Navbar
             $($('.date-display').find('.day-name')).text(response.date.day)
             $($('.date-display').find('.date')).text(response.date.date)
@@ -90,8 +91,7 @@ $(document).ready(function () {
 
 // Animating the suggested card element when opening dishes details page
 $('#meals-per-day').on('click', '.suggested-cards', function () {
-    // $(this).empty()
-    // $(this).append('<h1>Loading</h1>')
+    let id = $(this).attr('data-id')
+    sessionStorage.setItem('dish-id', id)
     location.href = './dish-details.html'
-    // setTimeout(() => location.href = './dish-details.html', 2000)
 })
