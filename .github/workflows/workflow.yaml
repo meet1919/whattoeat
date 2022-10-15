@@ -21,4 +21,4 @@ jobs:
           aws-region: ap-south-1
       - name: Push designs to s3
         run: |
-          aws s3 cp $PWD s3://what2eatapp --recursive
+          aws s3 cp $PWD/whattoeat s3://what2eatapp --recursive
