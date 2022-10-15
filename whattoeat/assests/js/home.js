@@ -42,18 +42,18 @@ $(document).ready(function () {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[0].id + `">
+                                <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[1].id + `">
                                     <div class="row">   
                                         <div class="dishes-thumb">
-                                            <img src="` + meal.dishes[0].image + `" alt="">
+                                            <img src="` + meal.dishes[1].image + `" alt="">
                                         </div>
                                         <div class="dishes-des">
                                             <div class="row">
                                                 <div class="col-xxl-12">
-                                                    <p class="dish-title">` + meal.dishes[0].name + `</p>
+                                                    <p class="dish-title">` + meal.dishes[1].name + `</p>
                                                 </div>
                                                 <div class="col-xxl-12">
-                                                    <p class="dish-brief">` + meal.dishes[0].description + `</p>
+                                                    <p class="dish-brief">` + meal.dishes[1].description + `</p>
                                                 </div>
                                                 <div class="col-xxl-12">
                                                     <div class="dish-tags">
