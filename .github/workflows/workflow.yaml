@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CI_COMMIT_SHA: ${{ github.sha }}
-      AWS_S3_BUCKET: 'what2eatapp'
+      AWS_S3_BUCKET: 'whattoeat.homes'
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     steps:
       - name: Checkout code
@@ -22,4 +22,4 @@ jobs:
       - name: Push designs to s3
         run: |
           aws s3 rm s3://what2eatapp --recursive
-          aws s3 cp $PWD/whattoeat s3://what2eatapp --recursive --acl public-read --metadata-directive REPLACE
+          aws s3 cp $PWD/whattoeat s3://whattoeat.homes --recursive --acl public-read --metadata-directive REPLACE
