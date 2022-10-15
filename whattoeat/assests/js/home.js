@@ -11,7 +11,6 @@ $(document).ready(function () {
             $($('.date-display').find('.day-name')).text(response.date.day)
             $($('.date-display').find('.date')).text(response.date.date)
     
-    
             // Adding suggestion to the home page
             for (i = 0; i < response.suggestions.length; i++) {
     
@@ -75,6 +74,8 @@ $(document).ready(function () {
 
     }
 })
+
+// Comment
 
 /* <div class="row pt-3">
     <p class="dish-title">` + meal.dishes[1].Name + `</p>
