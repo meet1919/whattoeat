@@ -1,16 +1,18 @@
-// Spinner (Loading screen)
-var spinner = function () {
-    setTimeout(function () {
-        if ($('#spinner').length > 0) {
-            $('#spinner').removeClass('show')
-        }
-    }, 1)
-};
+// Preloader
+const preloader = document.querySelector('.preloader');
+const fadeOutEffect = setInterval(() => {
+    if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+    }
+    if (preloader.style.opacity > 0) {
+        preloader.style.opacity -= 0.5;
+    } else {
+        clearInterval(fadeOutEffect);
+        $('.preloader').hide()
+    }
+}, 200);
 
-spinner()
-
-
-
+window.addEventListener('load', fadeOutEffect);
 
 
 // // For toggling light and dark mode --------------------------------------------------------
