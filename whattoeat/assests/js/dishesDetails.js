@@ -4,9 +4,9 @@ $(document).ready(function () {
     if (curr_url.includes('details')) {
 
         // FOR API
-        // $.get('/dishes-details/', function (response) {
-
-        // })
+        $.get('https://amfqd61hk0.execute-api.ap-south-1.amazonaws.com/dev/v1/dish/1', function (response) {
+            console.log(response)
+        })
 
         var response = {
             "date": {
