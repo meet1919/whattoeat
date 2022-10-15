@@ -23,17 +23,17 @@ $(document).ready(function () {
                 "Ingredients": [
                     {
                         "item": "Rice",
-                        "quantity": "5 cups",
+                        "quantity": "5",
                         "unit": "cup"
                     },
                     {
                         "item": "Paneer",
-                        "quantity": "50 gms",
+                        "quantity": "50",
                         "unit": "gm"
                     },
                     {
                         "item": "Veggies",
-                        "quantity": "10 exotic",
+                        "quantity": "10",
                         "unit": "exotic"
                     }
                 ],
@@ -53,7 +53,7 @@ $(document).ready(function () {
             let table_row = 
                 `<tr>
                     <td>` + ingredients.item + `</td>
-                    <td>` + ingredients.quantity + `</td>
+                    <td>` + ingredients.quantity + ` ` + ingredients.unit + `</td>
                 </tr>`
 
             $('#dish-ingredients tbody').append(table_row)
