@@ -4,6 +4,7 @@
 
 body {
     animation: transitionIn 0.75s;
+    background-color: white;
 }
 
 .preloader {
@@ -55,17 +56,21 @@ body {
     padding-bottom: 1em;
 }
 
-.app-logo {
-    width: 100%;
+.navbar-menu {
+    width: 30%;
 }
 
-.navbar-header {
-    width: 13%;
+.app-logo {
+    width: 40%;
 }
 
 @media (max-width: 576px) {
-    .navbar-header {
-        width: 30%;
+    .app-logo {
+        width: 100%;
+    }
+
+    #gl-btn {
+        font-size: 0.8em;
     }
 }
 
@@ -76,8 +81,9 @@ body {
     border: 0.1em solid white;
     padding: 0.4em 0.7em 0.5em 0.7em;
     color: white;
-    font-weight: 800;
+    font-weight: 600;
     text-decoration: none;
+    float: right;
 }
 
 #gl-btn:hover {
@@ -90,12 +96,27 @@ body {
 .date-display {
     text-align: center;
     color: rgb(255, 255, 255);
+    margin-bottom: 0em !important;
+}
+
+.date-display p {
+    margin-bottom: 0em !important;
 }
 
 .date-display .day-name {
     font-family: 'Gemunu Libre', sans-serif;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    position: relative;
+    top: 0.2em;
+}
+
+.date-display .date {
+    font-family: 'Gemunu Libre', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    position: relative;
+    top: -0.4em;
 }
 
 /* ====================================================================================== */
