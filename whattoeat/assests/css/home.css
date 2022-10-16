@@ -129,7 +129,7 @@ body {
 }
 
 #meals .per-meal {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 0.12em solid rgb(18, 20, 25);
     padding-bottom: 1em;
     background-color: rgba(229, 231, 235, 0.333);
@@ -145,8 +145,8 @@ body {
     background-color: rgb(18, 20, 25);
     /* font-family: winear; */
     color: white;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     position: relative;
     left: 50%;
     -ms-transform: translateX(-50%);
