@@ -7,10 +7,12 @@ $(document).ready(function () {
         // FOR API
         $.get('https://amfqd61hk0.execute-api.ap-south-1.amazonaws.com/dev/v1/suggestion', function (response) {
             
-            console.log(response)
+            let date = response.date.date.split(' ')[0]
+            date = [response.date.date.split(' ')[0].split('-')[2], response.date.date.split(' ')[0].split('-')[1], response.date.date.split(' ')[0].split('-')[0]].join('/')  
+
             // Set Day & Date in the Navbar
             $($('.date-display').find('.day-name')).text(response.date.day)
-            $($('.date-display').find('.date')).text(response.date.date)
+            $($('.date-display').find('.date')).text(date)
     
             // Adding suggestion to the home page
             for (i = 0; i < response.suggestions.length; i++) {

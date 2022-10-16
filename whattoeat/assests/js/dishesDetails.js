@@ -6,8 +6,11 @@ $(document).ready(function () {
         let id = sessionStorage.getItem('dish-id')
         $.get(`https://amfqd61hk0.execute-api.ap-south-1.amazonaws.com/dev/v1/dish/${id}`, function (response) {
 
+            let date = response.date.date.split(' ')[0]
+            date = [response.date.date.split(' ')[0].split('-')[2], response.date.date.split(' ')[0].split('-')[1], response.date.date.split(' ')[0].split('-')[0]].join('/')
+
             $($('.date-display').find('.day-name')).text(response.date.day)
-            $($('.date-display').find('.date')).text(response.date.date)
+            $($('.date-display').find('.date')).text(date)
 
             // Add title name, image
             $('#dish-heading h1').text(response.dish.name)
