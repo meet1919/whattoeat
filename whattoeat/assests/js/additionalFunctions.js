@@ -12,7 +12,7 @@ const fadeOutEffect = setInterval(() => {
     }
 }, 200);
 
-window.addEventListener('load', fadeOutEffect);
+document.addEventListener('load', fadeOutEffect);
 
 
 // // For toggling light and dark mode --------------------------------------------------------

@@ -21,7 +21,7 @@ $(document).ready(function () {
                 let meal_suggestion_element =
                     `<div class="col-sm-12 col-md-6 col-lg-4 col-xxl-4 mt-3 mb-4">
                         <div class="per-meal">
-                            <button class="meals-category">` + meal.meal + `</button>
+                            <button class="meals-category">` + meal.meal.toLowerCase() + `</button>
                             <div class="row gy-2 mt-2 justify-content-center">
                                 <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[0].id + `">
                                     <div class="row">   
