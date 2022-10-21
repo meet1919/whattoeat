@@ -26,7 +26,7 @@ $(document).ready(function () {
                                 <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[0].id + `">
                                     <div class="row">   
                                         <div class="dishes-thumb">
-                                            <img src="` + meal.dishes[0].image + `" alt="">
+                                            <img src="./assests/img/manchu.jpg" alt="">
                                         </div>
                                         <div class="dishes-des">
                                             <div class="row">
@@ -48,7 +48,7 @@ $(document).ready(function () {
                                 <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[1].id + `">
                                     <div class="row">   
                                         <div class="dishes-thumb">
-                                            <img src="` + meal.dishes[1].image + `" alt="">
+                                            <img src="./assests/img/manchu.jpg" alt="">
                                         </div>
                                         <div class="dishes-des">
                                             <div class="row">
