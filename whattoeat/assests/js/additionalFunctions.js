@@ -1,3 +1,17 @@
+// Below is the code, when groceries list page is open the button will be highlighted
+$(document).ready(function () {
+    var curr_url = location.href
+    if (curr_url.includes('groceries-list')) { 
+        console.log('yesssss')
+        $('#gl-btn').css({
+            'color': 'white',
+            'background-color': '#3EC3A4',
+            'border': '0.1em solid #3EC3A4'
+        })
+    }
+})
+
+
 // Preloader
 const preloader = document.querySelector('.preloader');
 const fadeOutEffect = setInterval(() => {
@@ -12,7 +26,10 @@ const fadeOutEffect = setInterval(() => {
     }
 }, 200);
 
-document.addEventListener('load', fadeOutEffect);
+window.addEventListener('load', fadeOutEffect);
+
+
+
 
 
 // // For toggling light and dark mode --------------------------------------------------------
