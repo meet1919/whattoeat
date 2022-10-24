@@ -302,6 +302,14 @@ button.learn-more {
     float: right;
 }
 
+@media (max-width: 576px) {
+    button.learn-more {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        float: none;
+    }
+}
+
 button.learn-more .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
