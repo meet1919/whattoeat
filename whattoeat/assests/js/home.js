@@ -16,7 +16,6 @@ $(document).ready(function () {
     
             // Adding suggestion to the home page
             for (i = 0; i < response.suggestions.length; i++) {
-    
                 let meal = response.suggestions[i]
                 let meal_suggestion_element =
                     `<div class="col-sm-12 col-md-6 col-lg-4 col-xxl-4 mt-3 mb-4">
@@ -26,7 +25,7 @@ $(document).ready(function () {
                                 <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[0].id + `">
                                     <div class="row">   
                                         <div class="dishes-thumb">
-                                            <img src="./assests/img/manchu.jpg" alt="">
+                                            <img src="` + meal.dishes[0].images[0].link + `" alt="">
                                         </div>
                                         <div class="dishes-des">
                                             <div class="row">
@@ -48,7 +47,7 @@ $(document).ready(function () {
                                 <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[1].id + `">
                                     <div class="row">   
                                         <div class="dishes-thumb">
-                                            <img src="./assests/img/manchu.jpg" alt="">
+                                            <img src="` + meal.dishes[1].images[0].link + `" alt="">
                                         </div>
                                         <div class="dishes-des">
                                             <div class="row">
