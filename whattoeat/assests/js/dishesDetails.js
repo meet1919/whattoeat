@@ -22,7 +22,6 @@ $(document).ready(function () {
 
         let id = sessionStorage.getItem('dish-id')
         $.get(`https://amfqd61hk0.execute-api.ap-south-1.amazonaws.com/dev/v1/dish/${id}`, function (response) {
-            
             let date = response.date.date.split(' ')[0]
             date = [response.date.date.split(' ')[0].split('-')[2], response.date.date.split(' ')[0].split('-')[1], response.date.date.split(' ')[0].split('-')[0]].join('/')
 
@@ -31,6 +30,7 @@ $(document).ready(function () {
 
             // Add title name, image
             $(`.${section_type} #dish-heading`).text(response.dish.name)
+            $(`.${section_type} #dish-description`).text(response.dish.detailed_description)
             $(`.${section_type} #dish-main-img img`).attr('src', response.dish.images[0].link)
 
             // Add Ingredients
