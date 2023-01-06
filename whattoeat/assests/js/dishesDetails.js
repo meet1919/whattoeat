@@ -36,11 +36,6 @@ $(document).ready(function () {
             // Add Ingredients
             for (i = 0; i < response.dish.ingredients.length; i++) {
                 let ingredients = response.dish.ingredients[i]
-                // let table_row =
-                //     `<tr>
-                //         <td>` + ingredients.name + `</td>
-                //         <td>` + ingredients.quantity + ` ` + ingredients.unit + `</td>
-                //     </tr>`
 
                 let table_row = 
                     `
