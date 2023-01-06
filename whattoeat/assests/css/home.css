@@ -142,6 +142,16 @@ body {
     border-radius: 10px;
 }
 
+#meals-per-day {
+    --bs-gutter-x: 3rem;
+}
+
+@media (max-width: 576px) {
+    #meals-per-day {
+        --bs-gutter-x: 0rem;
+    }
+}
+
 #meals .per-meal {
     border-radius: 5px;
     /* border: 0.12em solid rgb(18, 20, 25); */
@@ -233,14 +243,14 @@ body {
     height: 100% !important;
 }
 
-.suggested-cards .dishes-des .row:nth-child(1),
+/* .suggested-cards .dishes-des .row:nth-child(1),
 .suggested-cards .dishes-des .row:nth-child(3) {
-    height: 15%;
+    height: 10%;
 }
 
 .suggested-cards .dishes-des .row:nth-child(2) {
-    height: 70%;
-}
+    height: 80%;
+} */
 
 .suggested-cards .dishes-thumb img {
     position: relative;

@@ -1,8 +1,7 @@
 // Below is the code, when groceries list page is open the button will be highlighted
 $(document).ready(function () {
     var curr_url = location.href
-    if (curr_url.includes('groceries-list')) { 
-        console.log('yesssss')
+    if (curr_url.includes('groceries-list')) {
         $('#gl-btn').css({
             'color': 'white',
             'background-color': '#3EC3A4',

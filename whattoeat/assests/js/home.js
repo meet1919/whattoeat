@@ -21,21 +21,21 @@ $(document).ready(function () {
                     `<div class="col-sm-12 col-md-6 col-lg-4 col-xxl-4 mt-3 mb-4">
                         <div class="per-meal">
                             <button class="meals-category">` + meal.meal.toLowerCase() + `</button>
-                            <div class="row gy-2 justify-content-center">
+                            <div class="row g-0 gy-2 justify-content-center">
                                 <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[0].id + `">
-                                    <div class="row">   
+                                    <div class="row g-0">   
                                         <div class="dishes-thumb">
                                             <img src="` + meal.dishes[0].images[0].link + `" alt="">
                                         </div>
                                         <div class="dishes-des">
-                                            <div class="row">
-                                                <div class="col-xxl-12">
+                                            <div class="row g-0">
+                                                <div class="col-xxl-12" style="height: 25%;">
                                                     <p class="dish-title">` + meal.dishes[0].name + `</p>
                                                 </div>
-                                                <div class="col-xxl-12">
+                                                <div class="col-xxl-12" style="height: 60%;">
                                                     <p class="dish-brief">` + meal.dishes[0].description + `</p>
                                                 </div>
-                                                <div class="col-xxl-12">
+                                                <div class="col-xxl-12" style="height: 15%;">
                                                     <div class="dish-tags">
     
                                                     </div>
@@ -45,19 +45,19 @@ $(document).ready(function () {
                                     </div>
                                 </div>
                                 <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[1].id + `">
-                                    <div class="row">   
+                                    <div class="row g-0">   
                                         <div class="dishes-thumb">
                                             <img src="` + meal.dishes[1].images[0].link + `" alt="">
                                         </div>
                                         <div class="dishes-des">
-                                            <div class="row">
-                                                <div class="col-xxl-12">
+                                            <div class="row g-0">
+                                                <div class="col-xxl-12" style="height: 25%;">
                                                     <p class="dish-title">` + meal.dishes[1].name + `</p>
                                                 </div>
-                                                <div class="col-xxl-12">
+                                                <div class="col-xxl-12" style="height: 60%;">
                                                     <p class="dish-brief">` + meal.dishes[1].description + `</p>
                                                 </div>
-                                                <div class="col-xxl-12">
+                                                <div class="col-xxl-12" style="height: 15%;">
                                                     <div class="dish-tags">
     
                                                     </div>

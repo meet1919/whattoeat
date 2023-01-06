@@ -115,7 +115,11 @@
 
 .ingred {
     display: flex;
-    width: 100%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    width: 90%;
+    border-bottom: 0.1em solid rgb(229, 229, 229);
 }
 
 .ingred p {
