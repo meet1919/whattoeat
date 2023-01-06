@@ -74,54 +74,109 @@
     </nav>
     <!-- ------------------------- Header - END ------------------------- -->
 
-    <!------------------------ Dish details main body - START ------------------------>
-    <div class="container">
-        <div class="row mt-4" id="dish-heading">
-            <h1></h1>
-        </div>
-        <hr>
-
-        <!----------- Image and Ingredients - START ----------->
-        <div class="row justify-content-center mt-3">
-            <div class="col-md-6" id="dish-main-img">
-                <img src="" alt="" id="dish-image">
+    <div class="desktop-device">
+        <!------------------------ Dish details main body - START ------------------------>
+        <div class="container">
+            <div class="row mt-4">
+                <h1 id="dish-heading"></h1>
             </div>
-            <div class="col-md-6" id="dish-ingredients">
-                <table class="table">
-                    <thead>
-                        <th scope="col">Name</th>
-                        <th scope="col">Quantity</th>
-                    </thead>
-                    <tbody>
-                        <!-- Data coming via API -->
-                    </tbody>
-                </table>
-                <p id="recipe-note">* Note this Quantity is for 2 people</p>
+            <hr>
+
+            <!----------- Image and Ingredients - START ----------->
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-6" id="dish-main-img">
+                    <img src="" alt="" id="dish-image">
+                </div>
+                <div class="col-md-6" id="dish-ingredients">
+                    <table class="table">
+                        <thead>
+                            <th scope="col">Name</th>
+                            <th scope="col">Quantity</th>
+                        </thead>
+                        <tbody>
+                            <!-- Data coming via API -->
+                        </tbody>
+                    </table>
+                    <p id="recipe-note">* Note this Quantity is for 2 people</p>
+                </div>
             </div>
-        </div>
-        <!----------- Image and Ingredients - END ----------->
+            <!----------- Image and Ingredients - END ----------->
 
 
-        <!----------- Recipe - START ----------->
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-12">
-                <h1 style="text-align: center;">Recipe</h1>
-                <hr>
+            <!----------- Recipe - START ----------->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-12">
+                    <h1 style="text-align: center;">Recipe</h1>
+                    <hr>
+                </div>
             </div>
-        </div>
-        <!----------- Recipe - END ----------->
+            <!----------- Recipe - END ----------->
 
 
-        <!----------- Youtube videos - START ----------->
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
+            <!----------- Youtube videos - START ----------->
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>
-        <!----------- Youtube videos - END ----------->
+            <!----------- Youtube videos - END ----------->
 
+        </div>
+        <!------------------------ Dish details main body - END ------------------------>
     </div>
-    <!------------------------ Dish details main body - END ------------------------>
+
+    <div class="mobile-device">
+        <!------------------------ Dish details main body - START ------------------------>
+
+        <!-- Image section -->
+        <div class="container-fluid" style="padding: 0;">
+            <div class="row g-0">
+                <div class="col-md-12" id="dish-main-img">
+                    <img src="" alt="" id="dish-image">
+                </div>
+            </div>
+
+            <!----------- Title and Ingredients - START ----------->
+            <div class="row g-0 justify-content-center dish-content-section">
+                <div class="col-md-12">
+                    <h3 class="mt-4 ps-3" id="dish-heading"></h3>
+                </div>
+                <div id="dish-ingredients">
+                    <div class="col-md-12 details-dropdown" id="ingredient-dropdown">
+                        <p>Ingredients</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="col-md-12" id="dish-table">
+                        <table class="table">
+                            <thead>
+                                <th scope="col">Name</th>
+                                <th scope="col">Quantity</th>
+                            </thead>
+                            <tbody>
+                                <!-- Data coming via API -->
+                            </tbody>
+                        </table>
+                        <p id="recipe-note">* Note this Quantity is for 2 people</p>
+                    </div>
+                </div>
+
+                <!-- --------- Recipe - START ----------->
+                <div>
+                    <div class="col-md-12 details-dropdown" id="recipe-dropdown">
+                        <p>Recipe</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="col-md-12" id="recipe-content">
+                        <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!----------- Recipe - END ----------->
+            </div>
+            <!----------- Title and Ingredients - END ----------->
+
+        </div>
+        <!------------------------ Dish details main body - END ------------------------>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"

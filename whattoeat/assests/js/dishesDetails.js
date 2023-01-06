@@ -1,5 +1,22 @@
+function MobileCheck(x) {
+    let elem_type = ''
+    if (x.matches) { // If media query matches
+        elem_type = 'mobile-device'
+    } else {
+        elem_type = 'desktop-device'
+    }
+    return elem_type
+}
+
+
 // To populate the details page
 $(document).ready(function () {
+
+
+    var x = window.matchMedia("(max-width: 576px)")
+    let section_type = MobileCheck(x) // Call listener function at run time
+    x.addListener(MobileCheck) // Attach listener function on state changes
+
     let curr_url = location.href
     if (curr_url.includes('details')) {
 
@@ -13,8 +30,8 @@ $(document).ready(function () {
             $($('.date-display').find('.date')).text(date)
 
             // Add title name, image
-            $('#dish-heading h1').text(response.dish.name)
-            $('#dish-main-img img').attr('src', response.dish.images[0].link)
+            $(`.${section_type} #dish-heading`).text(response.dish.name)
+            $(`.${section_type} #dish-main-img img`).attr('src', response.dish.images[0].link)
 
             // Add Ingredients
             for (i = 0; i < response.dish.ingredients.length; i++) {
@@ -25,13 +42,23 @@ $(document).ready(function () {
                         <td>` + ingredients.quantity + ` ` + ingredients.unit + `</td>
                     </tr>`
 
-                $('#dish-ingredients tbody').append(table_row)
+                $(`.${section_type} #dish-ingredients tbody`).append(table_row)
             }
 
             // Add video link
             let emded_video_link = response.dish.videos[0].link.replace('watch?v=', 'embed/')
-            $('.recipe-videos').attr('src', emded_video_link)
+            $(`.${section_type} .recipe-videos`).attr('src', emded_video_link)
 
         })
     }
 }) 
+
+
+// Hide unhide ingredients, recipe
+$('#ingredient-dropdown').click(function () {
+    $('#dish-table').slideToggle(500)
+})
+
+$('#recipe-dropdown').click(function () {
+    $('#recipe-content').slideToggle(500)
+})
