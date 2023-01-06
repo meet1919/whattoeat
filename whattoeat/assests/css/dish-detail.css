@@ -22,7 +22,7 @@
 
 
 .desktop-device #dish-heading {
-    text-align: center;
+    text-align: left;
 }
 
 #dish-ingredients .table {
@@ -107,9 +107,13 @@
     display: none;
 }
 
-#dish-description {
+.mobile-device #dish-description {
     padding-left: 1em;
     padding-right: 1em;
+    text-align: justify;
+}
+
+.desktop-device #dish-description {
     text-align: justify;
 }
 
@@ -145,4 +149,29 @@
 
 .fa-chevron-up {
     display: none;
+}
+
+.ingredient-quantity {
+    text-align: right;
+}
+
+#vegnonveg-tag {
+    height: 50%;
+}
+
+#dish-heading-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+#dish-heading-container h3 {
+    margin: 0;
+}
+
+#vegnonveg-tag-container {
+    width: 20%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }

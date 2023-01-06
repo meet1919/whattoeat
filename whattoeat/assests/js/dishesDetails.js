@@ -36,16 +36,27 @@ $(document).ready(function () {
             // Add Ingredients
             for (i = 0; i < response.dish.ingredients.length; i++) {
                 let ingredients = response.dish.ingredients[i]
-
-                let table_row = 
-                    `
-                    <div class="ingred">
+                let table_row = ''
+                if (section_type == 'mobile-device') {
+                    table_row = 
+                        `
+                        <div class="ingred">
                         <p class="ingred-name">` + ingredients.name + ` </p>
                         <p class="ingred-quant">` + ingredients.quantity + ` ` + ingredients.unit + `</p>
-                    </div>
-                    `
+                        </div>
+                        `
+                    $(`.${section_type} #dish-ingredients #ingred-table`).append(table_row)
+                } else {
+                    table_row = 
+                        `
+                        <tr>
+                            <td class="ingredient-name">` + ingredients.name + ` </td>
+                            <td class="ingredient-quantity">` + ingredients.quantity + ` ` + ingredients.unit + `</td>
+                        </tr>
+                        `
+                    $(`.${section_type} #dish-ingredients tbody`).append(table_row)
+                }
 
-                $(`.${section_type} #dish-ingredients #ingred-table`).append(table_row)
             }
 
             // Add video link

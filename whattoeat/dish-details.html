@@ -85,22 +85,17 @@
     <div class="desktop-device">
         <!------------------------ Dish details main body - START ------------------------>
         <div class="container">
-            <div class="row mt-4">
-                <h1 id="dish-heading"></h1>
-            </div>
-            <hr>
-
             <!----------- Image and Ingredients - START ----------->
             <div class="row justify-content-center mt-3">
                 <div class="col-md-6" id="dish-main-img">
                     <img src="" alt="" id="dish-image">
                 </div>
                 <div class="col-md-6" id="dish-ingredients">
-                    <p id="dish-description"></p>
+                    <h1 id="dish-heading"></h1>
+                    <p class="mt-4" id="dish-description"></p>
                     <table class="table">
                         <thead>
-                            <th scope="col">Name</th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col">Ingredients</th>
                         </thead>
                         <tbody>
                             <!-- Data coming via API -->
@@ -147,8 +142,13 @@
 
             <!----------- Title and Ingredients - START ----------->
             <div class="row g-0 justify-content-center dish-content-section">
-                <div class="col-md-12">
-                    <h3 class="mt-4 ps-3" id="dish-heading"></h3>
+                <div class="col-md-12 d-flex mt-2" style="height: 3em;">
+                    <div id="dish-heading-container">
+                        <h3 class="ps-3" id="dish-heading"></h3>
+                    </div>
+                    <div id="vegnonveg-tag-container">
+                        <img class="pe-3" src="./assests/img/veg.jpg" alt="" id="vegnonveg-tag">
+                    </div>
                 </div>
                 <div class="col-md-12 mt-2">
                     <p id="dish-description"></p>
