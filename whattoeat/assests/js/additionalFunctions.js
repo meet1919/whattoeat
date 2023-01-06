@@ -20,20 +20,20 @@ $(document).ready(function () {
 
 
 // Preloader
-const preloader = document.querySelector('.preloader');
-const fadeOutEffect = setInterval(() => {
-    if (!preloader.style.opacity) {
-        preloader.style.opacity = 1;
-    }
-    if (preloader.style.opacity > 0) {
-        preloader.style.opacity -= 0.5;
-    } else {
-        clearInterval(fadeOutEffect);
-        $('.preloader').hide()
-    }
-}, 200);
+// const preloader = document.querySelector('.preloader');
+// const fadeOutEffect = setInterval(() => {
+//     if (!preloader.style.opacity) {
+//         preloader.style.opacity = 1;
+//     }
+//     if (preloader.style.opacity > 0) {
+//         preloader.style.opacity -= 0.5;
+//     } else {
+//         // clearInterval(fadeOutEffect);
+//         // $('.preloader').hide()
+//     }
+// }, 200);
 
-window.addEventListener('load', fadeOutEffect);
+// window.addEventListener('load', fadeOutEffect);
 
 
 
