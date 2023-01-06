@@ -114,15 +114,31 @@
 }
 
 .ingred {
-    margin-left: 1em;
-    margin-right: 1em;
+    display: flex;
+    width: 100%;
 }
 
 .ingred p {
     margin: 0;
 }
 
+#ingred-table {
+    width: 100%;
+}
+
 .ingred .ingred-name {
     font-size: 1em;
     font-weight: 600;
+    width: 50%;
+    padding-left: 1em;
+}
+
+.ingred .ingred-quant {
+    text-align: right;
+    width: 50%;
+    padding-right: 1em;
+}
+
+.fa-chevron-up {
+    display: none;
 }

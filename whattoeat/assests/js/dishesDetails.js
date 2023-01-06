@@ -45,7 +45,7 @@ $(document).ready(function () {
                 let table_row = 
                     `
                     <div class="ingred">
-                        <p class="ingred-name">` + ingredients.name + `</p>
+                        <p class="ingred-name">` + ingredients.name + ` </p>
                         <p class="ingred-quant">` + ingredients.quantity + ` ` + ingredients.unit + `</p>
                     </div>
                     `
@@ -65,8 +65,12 @@ $(document).ready(function () {
 // Hide unhide ingredients, recipe
 $('#ingredient-dropdown').click(function () {
     $('#dish-table').slideToggle(500)
+    $($(this).find('.fa-chevron-up')).toggle()
+    $($(this).find('.fa-chevron-down')).toggle()
 })
 
 $('#recipe-dropdown').click(function () {
     $('#recipe-content').slideToggle(500)
+    $($(this).find('.fa-chevron-up')).toggle()
+    $($(this).find('.fa-chevron-down')).toggle()
 })
