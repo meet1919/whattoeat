@@ -241,6 +241,8 @@ body {
 
 .suggested-cards .dishes-des .row {
     height: 100% !important;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 /* .suggested-cards .dishes-des .row:nth-child(1),
@@ -256,15 +258,17 @@ body {
     position: relative;
     top: 50%;
     left: 50%;
-    height: 7em;
-    width: 7em;
-    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    /* border-radius: 50%; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     -webkit-transform: translate(-50%, -50%);
 }
 
 .suggested-cards .dishes-des .dish-title {
     color: black;
-    text-align: center;
+    text-align: left;
     font-size: 1.2em;
     font-weight: 600;
     /* height: 1.2em !important; */
@@ -276,7 +280,10 @@ body {
 
 .suggested-cards .dishes-des .dish-brief {
     color: black;
-    text-align: center;
+    text-align: justify;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    margin-top: 0.5em;
 }
 
 .suggested-cards .dishes-des .dish-tags {
