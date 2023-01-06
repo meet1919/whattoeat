@@ -36,13 +36,21 @@ $(document).ready(function () {
             // Add Ingredients
             for (i = 0; i < response.dish.ingredients.length; i++) {
                 let ingredients = response.dish.ingredients[i]
-                let table_row =
-                    `<tr>
-                        <td>` + ingredients.name + `</td>
-                        <td>` + ingredients.quantity + ` ` + ingredients.unit + `</td>
-                    </tr>`
+                // let table_row =
+                //     `<tr>
+                //         <td>` + ingredients.name + `</td>
+                //         <td>` + ingredients.quantity + ` ` + ingredients.unit + `</td>
+                //     </tr>`
 
-                $(`.${section_type} #dish-ingredients tbody`).append(table_row)
+                let table_row = 
+                    `
+                    <div class="ingred">
+                        <p class="ingred-name">` + ingredients.name + `</p>
+                        <p class="ingred-quant">` + ingredients.quantity + ` ` + ingredients.unit + `</p>
+                    </div>
+                    `
+
+                $(`.${section_type} #dish-ingredients #ingred-table`).append(table_row)
             }
 
             // Add video link
