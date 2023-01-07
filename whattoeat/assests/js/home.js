@@ -13,53 +13,70 @@ $(document).ready(function () {
             // Set Day & Date in the Navbar
             $($('.date-display').find('.day-name')).text(response.date.day)
             $($('.date-display').find('.date')).text(date)
-    
+
             // Adding suggestion to the home page
             for (i = 0; i < response.suggestions.length; i++) {
                 let meal = response.suggestions[i]
-                let meal_suggestion_element =
-                    `<div class="col-sm-12 col-md-6 col-lg-4 col-xxl-4 mt-3 mb-4">
-                        <div class="per-meal">
+                let meal_suggestion_element = ''
+
+                if (meal.meal.toLowerCase() == 'dinner' &&  response.date.day == 'Sunday') { 
+                    // Here there are no meals suggested for dinner
+                    meal_suggestion_element = 
+                    `
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-4 mt-3 mb-4">
+                        <div class="sunday-dinner-special">
                             <button class="meals-category">` + meal.meal.toLowerCase() + `</button>
-                            <div class="row g-0 gy-2 justify-content-center">
-                                <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[0].id + `">
-                                    <div class="row g-0">   
-                                        <div class="dishes-thumb">
-                                            <img src="` + meal.dishes[0].images[0].link + `" alt="">
-                                        </div>
-                                        <div class="dishes-des">
-                                            <div class="row g-0">
-                                                <div class="col-xxl-12" style="height: 25%;">
-                                                    <p class="dish-title">` + meal.dishes[0].name + `</p>
-                                                </div>
-                                                <div class="col-xxl-12" style="height: 60%;">
-                                                    <p class="dish-brief">` + meal.dishes[0].description + `</p>
-                                                </div>
-                                                <div class="col-xxl-12" style="height: 15%;">
-                                                    <div class="dish-tags">
-    
+                            <hr style="margin-top: 0;">
+                            <div class="restaurant-special">
+                                <div>
+                                    <h4>` + meal.dishes[0].name + `</h4>
+                                    <p class="dish-brief">` + meal.dishes[0].description + `</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                } else {
+                    meal_suggestion_element =
+                        `<div class="col-sm-12 col-md-6 col-lg-4 col-xxl-4 mt-3 mb-4">
+                            <div class="per-meal" style="width: 100%; margin: 0;">
+                                <button class="meals-category">` + meal.meal.toLowerCase() + `</button>
+                                <div class="row g-0 justify-content-center" style="width: 100%; margin: 0;">
+                                    <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[0].id + `">
+                                        <div class="row g-0">   
+                                            <div class="dishes-thumb">
+                                                <img src="` + meal.dishes[0].images[0].link + `" alt="">
+                                            </div>
+                                            <div class="dishes-des">
+                                                <div class="row g-0">
+                                                    <div class="col-xxl-12" style="height: 80%;">
+                                                        <p class="dish-title">` + meal.dishes[0].name + `</p>
+                                                        <p class="dish-brief">` + meal.dishes[0].description + `</p>
+                                                    </div>
+                                                    <div class="col-xxl-12" style="height: 20%;">
+                                                        <div class="dish-tags">
+        
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[1].id + `">
-                                    <div class="row g-0">   
-                                        <div class="dishes-thumb">
-                                            <img src="` + meal.dishes[1].images[0].link + `" alt="">
-                                        </div>
-                                        <div class="dishes-des">
-                                            <div class="row g-0">
-                                                <div class="col-xxl-12" style="height: 25%;">
-                                                    <p class="dish-title">` + meal.dishes[1].name + `</p>
-                                                </div>
-                                                <div class="col-xxl-12" style="height: 60%;">
-                                                    <p class="dish-brief">` + meal.dishes[1].description + `</p>
-                                                </div>
-                                                <div class="col-xxl-12" style="height: 15%;">
-                                                    <div class="dish-tags">
-    
+                                    <div class="col-md-12 suggested-cards" data-id="` + meal.dishes[1].id + `">
+                                        <div class="row g-0">   
+                                            <div class="dishes-thumb">
+                                                <img src="` + meal.dishes[1].images[0].link + `" alt="">
+                                            </div>
+                                            <div class="dishes-des">
+                                                <div class="row g-0">
+                                                    <div class="col-xxl-12" style="height: 80%;">
+                                                        <p class="dish-title">` + meal.dishes[1].name + `</p>
+                                                        <p class="dish-brief">` + meal.dishes[1].description + `</p>
+                                                    </div>
+                                                    <div class="col-xxl-12" style="height: 20%;">
+                                                        <div class="dish-tags">
+        
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -67,8 +84,8 @@ $(document).ready(function () {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>`
+                        </div>`
+                }
     
                 $('#meals-per-day').append(meal_suggestion_element)
             }
