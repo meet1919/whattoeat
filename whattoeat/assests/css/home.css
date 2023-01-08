@@ -265,8 +265,9 @@ body {
 }
 
 @media (max-width: 576px) {
-    .suggested-cards {
-        width: 90%;
+    .suggested-cards > .row {
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
@@ -314,7 +315,7 @@ body {
 .suggested-cards .dishes-des .dish-title {
     color: black;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     min-height: 1em;
     height: fit-content;
@@ -344,12 +345,6 @@ body {
 @media (max-width: 1200px) {
     .suggested-cards .dishes-des .dish-title {
         font-size: 1em;
-    }
-}
-
-@media (max-width: 992px) {
-    .suggested-cards .dishes-des .dish-title {
-        font-size: 1.2em;
     }
 }
 
