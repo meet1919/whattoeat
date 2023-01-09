@@ -45,16 +45,16 @@ $(document).ready(function () {
                         <p class="ingred-quant">` + ingredients.quantity + ` ` + ingredients.unit + `</p>
                         </div>
                         `
-                    $(`.${section_type} #dish-ingredients #ingred-table`).append(table_row)
+                    $(`.${section_type} #dish-ingredients #ingred-table-mob`).append(table_row)
                 } else {
                     table_row = 
                         `
-                        <tr>
-                            <td class="ingredient-name">` + ingredients.name + ` </td>
-                            <td class="ingredient-quantity">` + ingredients.quantity + ` ` + ingredients.unit + `</td>
-                        </tr>
+                        <div class="ingred">
+                        <p class="ingred-name">` + ingredients.name + ` </p>
+                        <p class="ingred-quant">` + ingredients.quantity + ` ` + ingredients.unit + `</p>
+                        </div>
                         `
-                    $(`.${section_type} #dish-ingredients tbody`).append(table_row)
+                    $(`.${section_type} #dish-ingredients #ingred-table-desk`).append(table_row)
                 }
 
             }
@@ -69,14 +69,14 @@ $(document).ready(function () {
 
 
 // Hide unhide ingredients, recipe
-$('#ingredient-dropdown').click(function () {
-    $('#dish-table').slideToggle(500)
+$('.ingredient-dropdown').click(function () {
+    $('.dish-table').slideToggle(500)
     $($(this).find('.fa-chevron-up')).toggle()
     $($(this).find('.fa-chevron-down')).toggle()
 })
 
-$('#recipe-dropdown').click(function () {
-    $('#recipe-content').slideToggle(500)
+$('.recipe-dropdown').click(function () {
+    $('.recipe-content').slideToggle(500)
     $($(this).find('.fa-chevron-up')).toggle()
     $($(this).find('.fa-chevron-down')).toggle()
 })

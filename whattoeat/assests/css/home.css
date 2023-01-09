@@ -96,6 +96,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     float: right;
+    user-select: none;
 }
 
 #gl-btn:hover {
@@ -114,6 +115,7 @@ body {
 
 .date-display p {
     margin-bottom: 0em !important;
+    user-select: none;
 }
 
 .date-display .day-name {
@@ -123,6 +125,7 @@ body {
     position: relative;
     top: 0.2em;
     letter-spacing: 1px;
+    user-select: none;
 }
 
 .date-display .date {
@@ -221,6 +224,7 @@ body {
     transform: translateX(-50%);
     /* box-shadow: inset 0px -1px 2px 2px rgba(0, 0, 0, 0.155); */
     letter-spacing: 7px;
+    user-select: none;
 }
 
 .knife {
@@ -324,6 +328,7 @@ body {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     line-height: 1.2em;
+    user-select: none;
 }
 
 .suggested-cards .dishes-des .dish-brief {
@@ -331,6 +336,7 @@ body {
     text-align: left;
     font-size: 0.9em;
     line-height: 1.2em;
+    user-select: none;
 }
 
 .suggested-cards .dishes-des .dish-tags {

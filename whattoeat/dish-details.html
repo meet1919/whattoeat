@@ -82,61 +82,85 @@
     </nav>
     <!-- ------------------------- Header - END ------------------------- -->
 
-    <div class="desktop-device">
+    <div class="desktop-device" style="user-select: none;">
         <!------------------------ Dish details main body - START ------------------------>
-        <div class="container">
+        <div class="container-fluid">
             <!----------- Image and Ingredients - START ----------->
-            <div class="row justify-content-center mt-3">
-                <div class="col-md-6" id="dish-main-img">
+            <div class="row justify-content-center">
+                <div class="col-md-5" id="dish-main-img">
                     <img src="" alt="" id="dish-image">
                 </div>
-                <div class="col-md-6" id="dish-ingredients">
-                    <div class="d-flex">
-                        <div id="dish-heading-container">
-                            <h1 id="dish-heading"></h1>
+                <div class="col-md-7" id="dish-ingredients-container">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="d-flex">
+                                <div id="dish-heading-container">
+                                    <h1 id="dish-heading"></h1>
+                                </div>
+                                <div id="vegnonveg-tag-container">
+                                    <img src="./assests/img/veg.jpg" alt="" width="40">
+                                </div>
+                            </div>
+                            <p class="mt-4" id="dish-description"></p>
                         </div>
-                        <div id="vegnonveg-tag-container">
-                            <img src="./assests/img/veg.jpg" alt="" width="40">
+                        <div class="col-md-12">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <div id="dish-ingredients">
+                                        <div class="col-md-12 details-dropdown ingredient-dropdown">
+                                            <p>Ingredients</p>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                            <i class="fa-solid fa-chevron-up"></i>
+                                        </div>
+                                        <div class="col-md-12 dish-table">
+                                            <div class="justify-content-center mb-4" id="ingred-table-desk">
+                                            </div>
+                                            <p id="recipe-note">* Note this Quantity is for 2 people</p>
+                                        </div>
+                                    </div>
+                                    <!-- <p id="recipe-note">* Note this Quantity is for 2 people</p> -->
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="col-md-12 details-dropdown recipe-dropdown">
+                                        <p>Recipe</p>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                        <i class="fa-solid fa-chevron-up"></i>
+                                    </div>
+                                    <div class="col-md-12 recipe-content">
+                                        <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="mt-4" id="dish-description"></p>
-                    <table class="table">
-                        <thead>
-                            <th scope="col">Ingredients</th>
-                        </thead>
-                        <tbody>
-                            <!-- Data coming via API -->
-                        </tbody>
-                    </table>
-                    <p id="recipe-note">* Note this Quantity is for 2 people</p>
                 </div>
             </div>
             <!----------- Image and Ingredients - END ----------->
 
 
             <!----------- Recipe - START ----------->
-            <div class="row justify-content-center mt-5">
+            <!-- <div class="row justify-content-center mt-5">
                 <div class="col-md-12">
                     <h1 style="text-align: center;">Recipe</h1>
                     <hr>
                 </div>
-            </div>
+            </div> -->
             <!----------- Recipe - END ----------->
 
 
             <!----------- Youtube videos - START ----------->
-            <div class="row justify-content-center">
+            <!-- <div class="row justify-content-center">
                 <div class="col-md-10">
                     <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
                 </div>
-            </div>
+            </div> -->
             <!----------- Youtube videos - END ----------->
 
         </div>
         <!------------------------ Dish details main body - END ------------------------>
     </div>
 
-    <div class="mobile-device">
+    <div class="mobile-device" style="user-select: none;">
         <!------------------------ Dish details main body - START ------------------------>
 
         <!-- Image section -->
@@ -161,13 +185,13 @@
                     <p id="dish-description"></p>
                 </div>
                 <div id="dish-ingredients">
-                    <div class="col-md-12 details-dropdown" id="ingredient-dropdown">
+                    <div class="col-md-12 details-dropdown ingredient-dropdown">
                         <p>Ingredients</p>
                         <i class="fa-solid fa-chevron-down"></i>
                         <i class="fa-solid fa-chevron-up"></i>
                     </div>
-                    <div class="col-md-12" id="dish-table">
-                        <div class="justify-content-center mb-4" id="ingred-table">
+                    <div class="col-md-12 dish-table">
+                        <div class="justify-content-center mb-4" id="ingred-table-mob">
                         </div>
                         <p id="recipe-note">* Note this Quantity is for 2 people</p>
                     </div>
@@ -175,12 +199,12 @@
 
                 <!-- --------- Recipe - START ----------->
                 <div>
-                    <div class="col-md-12 details-dropdown" id="recipe-dropdown">
+                    <div class="col-md-12 details-dropdown recipe-dropdown">
                         <p>Recipe</p>
                         <i class="fa-solid fa-chevron-down"></i>
                         <i class="fa-solid fa-chevron-up"></i>
                     </div>
-                    <div class="col-md-12" id="recipe-content">
+                    <div class="col-md-12 recipe-content">
                         <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
