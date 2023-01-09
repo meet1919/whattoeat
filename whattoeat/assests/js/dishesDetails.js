@@ -54,7 +54,7 @@ $(document).ready(function () {
                         <p class="ingred-quant">` + ingredients.quantity + ` ` + ingredients.unit + `</p>
                         </div>
                         `
-                    $(`.${section_type} #dish-ingredients #ingred-table-desk`).append(table_row)
+                    $(`.${section_type} #ingred-table-desk`).append(table_row)
                 }
 
             }
@@ -68,15 +68,44 @@ $(document).ready(function () {
 }) 
 
 
-// Hide unhide ingredients, recipe
-$('.ingredient-dropdown').click(function () {
+// Hide unhide ingredients, recipe (FOR MOBILE DEVICE)
+$('.mobile-device .ingredient-dropdown').click(function () {
     $('.dish-table').slideToggle(500)
     $($(this).find('.fa-chevron-up')).toggle()
     $($(this).find('.fa-chevron-down')).toggle()
 })
 
-$('.recipe-dropdown').click(function () {
+$('.mobile-device .recipe-dropdown').click(function () {
     $('.recipe-content').slideToggle(500)
     $($(this).find('.fa-chevron-up')).toggle()
     $($(this).find('.fa-chevron-down')).toggle()
+})
+
+// Hide unhide ingredients, recipe (FOR DESKTOP DEVICE)
+$('.desktop-device .details-dropdown').click(function () {
+    let to_point = $(this).attr('data-point')
+    let top_point_list = ['.dish-table', '.recipe-content']
+
+    let enabled_class = $(this).attr('class').replace('col-md-12 details-dropdown ', '')
+    let total_classes = []
+    $('#dish-details-container').children().map(function () {
+        total_classes.push($(this).attr('class').replace('col-md-12 details-dropdown ', ''))
+    })
+
+    for (i=0; i < top_point_list.length; i++) {
+        if (top_point_list[i].includes(to_point)) {
+            $(this).css('border-right', 'none')
+            $(top_point_list[i]).prop('hidden', false)
+        } else {
+            for (j=0; j < total_classes.length; j++) {
+                if (total_classes[j] != enabled_class) {
+                    console.log(total_classes[j])
+                    $(`.${total_classes[j]}`).css('border-right', '0.1em solid rgb(229, 229, 229)')
+                }
+                $(top_point_list[i]).prop('hidden', true)
+            }
+        }
+    }
+
+    
 })

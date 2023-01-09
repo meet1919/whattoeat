@@ -104,8 +104,30 @@
                             <p class="mt-4" id="dish-description"></p>
                         </div>
                         <div class="col-md-12">
-                            <div class="row g-0">
-                                <div class="col-md-5">
+                            <div class="row g-0" style="position: relative;">
+                                <div class="col-md-5" style="position: absolute; top: 0; left: 0.1em; z-index: 200; background-color: white;">
+                                    <div class="row g-0" id="dish-details-container">
+                                        <div class="col-md-12 details-dropdown ingredient-dropdown" data-point="dish-table">
+                                            <p>Ingredients</p>
+                                        </div>
+                                        <div class="col-md-12 details-dropdown recipe-dropdown" data-point="recipe-content">
+                                            <p>Recipe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7" style="border: 0.1em solid rgb(229, 229, 229); position: absolute; right: 0; top: 0;">
+                                    <div class="row g-0" style="display: flex; justify-content: center; align-items: center; height: 23em;">
+                                        <div class="col-md-12 dish-table">
+                                            <div class="justify-content-center mb-1" id="ingred-table-desk">
+                                            </div>
+                                            <p class="ps-4" id="recipe-note">* Note this Quantity is for 2 people</p>
+                                        </div>
+                                        <div class="col-md-12 recipe-content" hidden>
+                                            <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-5">
                                     <div id="dish-ingredients">
                                         <div class="col-md-12 details-dropdown ingredient-dropdown">
                                             <p>Ingredients</p>
@@ -118,7 +140,6 @@
                                             <p id="recipe-note">* Note this Quantity is for 2 people</p>
                                         </div>
                                     </div>
-                                    <!-- <p id="recipe-note">* Note this Quantity is for 2 people</p> -->
                                 </div>
                                 <div class="col-md-7">
                                     <div class="col-md-12 details-dropdown recipe-dropdown">
@@ -129,7 +150,7 @@
                                     <div class="col-md-12 recipe-content">
                                         <iframe class="recipe-videos" src="" title="" frameborder="0" allowfullscreen></iframe>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

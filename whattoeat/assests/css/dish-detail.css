@@ -93,7 +93,7 @@
     justify-content: center;
 }
 
-.details-dropdown {
+.movile-device .details-dropdown {
     border-top: 0.1em solid rgb(229, 229, 229);
     display: flex;
     align-items: center;
@@ -101,8 +101,18 @@
     cursor: pointer;
 }
 
+.desktop-device .details-dropdown {
+    border-top: 0.1em solid rgb(229, 229, 229);
+    border-left: 0.1em solid rgb(229, 229, 229);
+    display: flex;
+    align-items: center;
+    height: 4em;
+    cursor: pointer;
+}
+
 .recipe-dropdown {
-    /* border-bottom: 0.1em solid rgb(229, 229, 229); */
+    border-bottom: 0.1em solid rgb(229, 229, 229);
+    border-right: 0.1em solid rgb(229, 229, 229);
 }
 
 .details-dropdown p {
